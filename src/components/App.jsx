@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ContactList, SearchBox, ContactForm } from ".";
-import { selectIsError, selectIsLoading } from "../redux/contactsSlice";
-import { fetchContacts } from "../redux/contactsOps";
+import { selectIsError, selectIsLoading } from "../redux/contacts/selectors";
+import { fetchContacts } from "../redux/contacts/operations";
 import { useEffect } from "react";
 
 const App = () => {

@@ -1,0 +1,32 @@
+.wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.form {
+}
+.box_input {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  text-align: center;
+  padding: 5px;
+}
+.btn {
+  margin: 10px;
+  color: rgb(196, 196, 49);
+  background-color: #465a21;
+  border: none;
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(245, 239, 239, 0.1);
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}

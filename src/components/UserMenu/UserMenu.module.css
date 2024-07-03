@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.title {
+  color: yellow;
+}
+.btn {
+  color: rgb(196, 196, 49);
+  background-color: #465a21;
+  border: none;
+  padding: 2px 2px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(245, 239, 239, 0.1);
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+.link_text {
+  color: #465a21;
+  font-size: 14px;
+}

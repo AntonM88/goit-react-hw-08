@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { Field, Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -47,18 +47,16 @@ export const LoginForm = () => {
               required
             />
           </div>
-          <div className={s.box_btn}>
+          <div>
             <button className={s.btn} type="submit">
               Login
             </button>
           </div>
         </Form>
       </Formik>
+
       <p className={s.link_text}>
-        You don`t have an account?{" "}
-        <NavLink className={s.link_text} to="/register">
-          Register
-        </NavLink>
+        You don`t have an account? <Link to="/register">Register</Link>
       </p>
     </div>
   );

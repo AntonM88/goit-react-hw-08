@@ -3,6 +3,7 @@ import { registerThunk } from "../../redux/auth/operations";
 import { Field, Formik, Form } from "formik";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import s from "./RegisterForm.module.css";
 
 const RegistrationSchema = Yup.object().shape({
   name: Yup.string().required("Required"),
@@ -21,42 +22,50 @@ export const RegisterForm = () => {
     password: "",
   };
   return (
-    <div>
+    <div className={s.wrapper}>
       <Formik
         validationSchema={RegistrationSchema}
         initialValues={initialValues}
         onSubmit={handleSubmit}
       >
-        <Form>
-          <div>
-            <label>
-              <span>Name</span>
-            </label>
-            <Field name="name" placeholder="name" required />
-          </div>
-          <div>
-            <label>
-              <span>Email</span>
-            </label>
-            <Field name="email" type="email" placeholder="email" required />
-          </div>
-          <div>
-            <label>
-              <span>Password</span>
-            </label>
+        <Form className={s.form}>
+          <div className={s.box_input}>
+            <label className={s.label}>Name</label>
             <Field
-              name="password"
-              type="password"
-              placeholder="password"
+              name="name"
+              placeholder="name"
+              className={s.input}
               required
             />
           </div>
           <div>
-            <button type="submit">Register</button>
+            <label className={s.label}>Email</label>
+            <Field
+              name="email"
+              type="email"
+              placeholder="email"
+              className={s.input}
+              required
+            />
+          </div>
+          <div>
+            <label className={s.label}>Password</label>
+            <Field
+              name="password"
+              type="password"
+              placeholder="password"
+              className={s.input}
+              required
+            />
+          </div>
+          <div>
+            <button className={s.btn} type="submit">
+              Register
+            </button>
           </div>
         </Form>
       </Formik>
-      <p>
+      <p className={s.link_text}>
         You already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
